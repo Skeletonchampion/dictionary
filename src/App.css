@@ -1,38 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+:root {
+
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    font-family: 'Oswald', sans-serif;
+
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+    margin: 1em auto;
+
+    max-width: 540px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.search__label, .search__input, .search__button {
+    margin-right: 1em;
+}
+.search__input {
+    padding: .5em 1em;
+}
+.search__button {
+    padding: .5em 1.5em;
+    border-radius: 5px;
+    border: none;
+    background-color: #ccc;
+    box-shadow: 1px 1px 5px;
+}
+.search__button:hover {
+    background-color: #aaa;
+}
+.search__notice {
+    display: block;
+    color: red;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+    margin-bottom: 1em;
+}
+.header__p {
+    font-style: italic;
+    opacity: .8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.phonetic {
+    display: flex;
+    align-items: center;
 }
+.phonetic__button {
+    width: 24px; height: 24px;
+    background: url('./images/volume_up_black_24dp.svg') no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.meaning__span {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.definitions {
+    margin-bottom: .7em;
+    margin-left: .6em;
+
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.311);
+}
+
+.synonyms, .antonyms {
+    margin-left: .4em;
+}
+.synonyms__h4 {
+    color: #2ECC71;
+}
+.antonyms__h4 {
+    color: #C0392B;
+}
+.synonym, .antonym {
+    list-style-type: none;
+}
+.synonym__li, .antonym__li {
+    display: inline;
+    cursor: pointer;
+}
+.synonym__li {
+    color: #037ffc;
+}
+.antonym__li {
+    color: #ff6105;
+}
+.synonym__span:hover, .antonym__span:hover {
+    text-decoration: underline;
+}
+
+.definition {
+    list-style-type: none;
+}
+.li__span {
+    font-size: 1.2rem;
+}
+.li__span--example {
+    opacity: .95;
+}
+
+/* @media (max-width: 480px) {
+    .main {
+        width: calc(100% - 50px);
+        margin-left: .4em;
+    }
+} */
