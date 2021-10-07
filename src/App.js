@@ -47,9 +47,6 @@ function App() {
     handleSearchInput(word);
   }
 
-  console.log(word, isError);
-
-
   return (
     <div className="App">
       <div className='main'>
@@ -109,7 +106,7 @@ function Main({audioRefs, word, onPlayAudio, onRedirect, error}) {
                     {definition.synonyms.length !== 0 && <h4 className='synonyms__h4'>SYNONYM{' '}</h4>}
                     <ul className='synonym'>{definition.synonyms.map((synonym, index, array) => (
                       <li className='synonym__li' key={uniqid()} onClick={() => onRedirect(synonym)}>{index !== array.length-1 ?
-                        (<span><span className='synonym__span'>{synonym}</span>, <span></span><span/></span>)
+                        (<span><span className='synonym__span'>{synonym}</span><span className='span__colon'>, </span><span/></span>)
                         :
                         (<span className='synonym__span'>{synonym}</span>)
                       }</li>
@@ -119,8 +116,8 @@ function Main({audioRefs, word, onPlayAudio, onRedirect, error}) {
                   <div className='antonyms'>
                     {definition.antonyms.length !== 0 && <h4 className='antonyms__h4'>ANTONYM{' '}</h4>}
                     <ul className='antonym'>{definition.antonyms.map((antonym, index, array) => (
-                      <li className='antonym__li' key={uniqid()}>{index !== array.length-1 ?
-                        (<span><span className='antonym__span'>{antonym}</span>, <span></span><span/></span>)
+                      <li className='antonym__li' key={uniqid()} onClick={() => onRedirect(antonym)}>{index !== array.length-1 ?
+                        (<span><span className='antonym__span'>{antonym}</span><span className='span__colon'>, </span><span/></span>)
                         :
                         (<span className='antonym__span'>{antonym}</span>)
                       }</li>

@@ -98,14 +98,17 @@
     display: inline;
     cursor: pointer;
 }
-.synonym__li {
+.synonym__span {
     color: #037ffc;
 }
-.antonym__li {
+.antonym__span {
     color: #ff6105;
 }
 .synonym__span:hover, .antonym__span:hover {
     text-decoration: underline;
+}
+.span__colon {
+    opacity: .8;
 }
 
 .definition {
@@ -118,9 +121,9 @@
     opacity: .95;
 }
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
     .main {
-        width: calc(100% - 50px);
         margin-left: .4em;
+        margin-right: .4em;
     }
-} */
+}
